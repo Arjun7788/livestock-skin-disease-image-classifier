@@ -3,10 +3,50 @@
 ## Project Overview
 This project uses Convolutional Neural Networks (CNN) and Transfer Learning (MobileNetV2) to classify livestock skin diseases from image data. The objective is to assist in the early detection of skin diseases in animals through automated image classification.
 
-## Dataset
-Dataset: Livestock Skin Disease Dataset
 
-The dataset contains images of different livestock skin disease categories used for training and evaluating image classification models.
+## Dataset
+
+The dataset contains images of livestock categorized into three classes:
+
+* Healthy
+* Lumpy Skin Disease
+* Foot-and-Mouth Disease
+
+### Dataset Statistics
+
+| Dataset Split  | Images |
+| -------------- | ------ |
+| Training Set   | 2,269  |
+| Validation Set | 485    |
+| Test Set       | 505    |
+| Total Images   | 3,259  |
+
+### Class Distribution
+
+#### Training Set
+
+* Healthy: 903 images
+* Lumpy Skin Disease: 844 images
+* Foot-and-Mouth Disease: 522 images
+
+#### Validation Set
+
+* Healthy: 193 images
+* Lumpy Skin Disease: 181 images
+* Foot-and-Mouth Disease: 111 images
+
+#### Test Set
+
+* Healthy: 195 images
+* Lumpy Skin Disease: 197 images
+* Foot-and-Mouth Disease: 113 images
+
+### Image Information
+
+* Total Classes: 3
+* Image Formats: JPG and PNG
+* Input Image Size: 224 × 224 pixels
+* Task Type: Multi-class Image Classification
 
 Dataset Link:
 (put your dataset link here)
