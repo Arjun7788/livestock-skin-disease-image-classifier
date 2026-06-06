@@ -1,2 +1,81 @@
 # livestock-skin-disease-image-classifier
-Deep learning image classification of livestock skin diseases using CNN and MobileNetV2.
+
+## Project Overview
+This project uses Convolutional Neural Networks (CNN) and Transfer Learning (MobileNetV2) to classify livestock skin diseases from image data. The objective is to assist in the early detection of skin diseases in animals through automated image classification.
+
+## Dataset
+Dataset: Livestock Skin Disease Dataset
+
+The dataset contains images of different livestock skin disease categories used for training and evaluating image classification models.
+
+Dataset Link:
+(put your dataset link here)
+
+
+
+## Project Structure
+
+livestock-skin-disease-classifier/
+│
+├── notebooks/
+│   └── Livestock_Skin_Disease_Classifier.ipynb
+├── README.md
+├── dataset_link.txt
+└── figures/
+
+
+
+## Methodology
+
+1. Dataset Loading
+2. Data Preprocessing
+3. Data Augmentation
+4. Custom CNN Model Development
+5. CNN Training and Evaluation
+6. Transfer Learning using MobileNetV2
+7. Model Comparison
+
+
+
+## Models Used
+
+### Custom CNN
+A Convolutional Neural Network built from scratch for image classification.
+
+### MobileNetV2
+A pre-trained MobileNetV2 model used for transfer learning.
+
+
+
+## Results
+The performance of both models was evaluated using:
+
+- Accuracy
+- Loss Curves
+- Confusion Matrix
+- Classification Metrics
+
+MobileNetV2 achieved better generalization performance compared to the custom CNN model.
+
+
+## Visualizations
+
+The figures folder contains:
+
+- CNN Accuracy Curve
+- CNN Loss Curve
+- CNN Confusion Matrix
+- MobileNetV2 Accuracy Curve
+- MobileNetV2 Loss Curve
+- MobileNetV2 Confusion Matrix
+
+
+  ## Requirements
+
+- Python 3.x
+- TensorFlow
+- Keras
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
