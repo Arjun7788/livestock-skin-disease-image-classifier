@@ -49,7 +49,7 @@ The dataset contains images of livestock categorized into three classes:
 * Task Type: Multi-class Image Classification
 
 Dataset Link:
-(put your dataset link here)
+[https://www.kaggle.com/datasets/devang03mgr/cattle-diseases-datasets/data](url)
 
 
 
