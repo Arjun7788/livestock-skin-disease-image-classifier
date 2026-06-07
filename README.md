@@ -1,121 +1,176 @@
-# livestock-skin-disease-image-classifier
+# Livestock Skin Disease Image Classifier
 
 ## Project Overview
-This project uses Convolutional Neural Networks (CNN) and Transfer Learning (MobileNetV2) to classify livestock skin diseases from image data. The objective is to assist in the early detection of skin diseases in animals through automated image classification.
 
+This project focuses on classifying livestock skin disease images using deep learning techniques. The objective is to automatically identify whether an animal is healthy or affected by a skin disease based on image data.
 
-## Dataset
-
-The dataset contains images of livestock categorized into three classes:
+Three classes are considered:
 
 * Healthy
 * Lumpy Skin Disease
 * Foot-and-Mouth Disease
 
+Two models were implemented and compared:
+
+1. Custom Convolutional Neural Network (CNN)
+2. MobileNetV2 Transfer Learning Model
+
+---
+
+## Dataset Information
+
+Dataset: Cattle Diseases Dataset
+
+Dataset Link:
+https://www.kaggle.com/datasets/devang03mgr/cattle-diseases-datasets
+
 ### Dataset Statistics
 
 | Dataset Split  | Images |
 | -------------- | ------ |
-| Training Set   | 2,269  |
+| Training Set   | 2269   |
 | Validation Set | 485    |
 | Test Set       | 505    |
-| Total Images   | 3,259  |
+| Total Images   | 3259   |
 
 ### Class Distribution
 
 #### Training Set
 
-* Healthy: 903 images
-* Lumpy Skin Disease: 844 images
-* Foot-and-Mouth Disease: 522 images
+* Healthy: 903
+* Lumpy Skin Disease: 844
+* Foot-and-Mouth Disease: 522
 
 #### Validation Set
 
-* Healthy: 193 images
-* Lumpy Skin Disease: 181 images
-* Foot-and-Mouth Disease: 111 images
+* Healthy: 193
+* Lumpy Skin Disease: 181
+* Foot-and-Mouth Disease: 111
 
 #### Test Set
 
-* Healthy: 195 images
-* Lumpy Skin Disease: 197 images
-* Foot-and-Mouth Disease: 113 images
+* Healthy: 195
+* Lumpy Skin Disease: 197
+* Foot-and-Mouth Disease: 113
 
 ### Image Information
 
-* Total Classes: 3
 * Image Formats: JPG and PNG
-* Input Image Size: 224 × 224 pixels
-* Task Type: Multi-class Image Classification
+* Number of Classes: 3
+* Input Image Size: 224 × 224
+* Task Type: Multi-Class Image Classification
 
-Dataset Link:
-[https://www.kaggle.com/datasets/devang03mgr/cattle-diseases-datasets/data](url)
-
-
-
-## Project Structure
-
-livestock-skin-disease-classifier/
-│
-├── notebooks/
-│   └── Livestock_Skin_Disease_Classifier.ipynb
-├── README.md
-├── dataset_link.txt
-└── figures/
-
-
+---
 
 ## Methodology
 
+The project follows the following workflow:
+
 1. Dataset Loading
-2. Data Preprocessing
-3. Data Augmentation
-4. Custom CNN Model Development
-5. CNN Training and Evaluation
-6. Transfer Learning using MobileNetV2
-7. Model Comparison
+2. Image Preprocessing
+3. Image Resizing and Normalization
+4. Data Augmentation
+5. Custom CNN Development
+6. CNN Training and Evaluation
+7. Transfer Learning using MobileNetV2
+8. Model Comparison
 
-
+---
 
 ## Models Used
 
 ### Custom CNN
-A Convolutional Neural Network built from scratch for image classification.
+
+Architecture:
+
+* Conv2D (32 filters)
+* MaxPooling2D
+* Conv2D (64 filters)
+* MaxPooling2D
+* Conv2D (128 filters)
+* MaxPooling2D
+* Flatten Layer
+* Dense Layer (128 neurons)
+* Dropout (0.5)
+* Softmax Output Layer
 
 ### MobileNetV2
-A pre-trained MobileNetV2 model used for transfer learning.
 
+Architecture:
 
+* MobileNetV2 (ImageNet Pretrained)
+* Global Average Pooling Layer
+* Dense Layer (128 neurons)
+* Dropout (0.5)
+* Softmax Output Layer
+
+---
+
+## Evaluation Metrics
+
+The models were evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+---
 
 ## Results
-The performance of both models was evaluated using:
 
-- Accuracy
-- Loss Curves
-- Confusion Matrix
-- Classification Metrics
+| Model       | Test Accuracy |
+| ----------- | ------------- |
+| Custom CNN  | 75.25%        |
+| MobileNetV2 | 88.12%        |
 
-MobileNetV2 achieved better generalization performance compared to the custom CNN model.
+MobileNetV2 achieved the highest performance and outperformed the custom CNN model by approximately 12.87 percentage points.
 
+---
 
-## Visualizations
+## Repository Structure
 
-The figures folder contains:
+```text
+livestock-skin-disease-classifier/
+│
+├── Livestock_Skin_Disease_Classifier.ipynb
+├── README.md
+├── dataset_link.txt
+└── figures/
+```
 
-- CNN Accuracy Curve
-- CNN Loss Curve
-- CNN Confusion Matrix
-- MobileNetV2 Accuracy Curve
-- MobileNetV2 Loss Curve
-- MobileNetV2 Confusion Matrix
+---
 
+## Output Figures
 
-  ## Requirements
+The repository includes:
 
-- Python 3.x
-- TensorFlow
-- Keras
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
+* CNN Accuracy Curve
+* CNN Loss Curve
+* CNN Confusion Matrix
+* MobileNetV2 Accuracy Curve
+* MobileNetV2 Loss Curve
+* MobileNetV2 Confusion Matrix
+
+---
+
+## How to Run the Project
+
+1. Open the notebook in Google Colab.
+2. Mount Google Drive.
+3. Upload or connect the dataset.
+4. Update dataset paths if required.
+5. Run all notebook cells sequentially.
+6. Evaluate the generated results and figures.
+
+---
+
+## Author
+
+Arjun Meghanandbhai Mod
+
+M.Sc. Data Science
+
+University of Europe For Applied Sciences 
